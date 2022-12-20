@@ -83,8 +83,8 @@ main {
         @while $index < 20 {
             div:nth-child(#{$index}) {
                 border: 2px solid $colorPrimary;
-                width: rem($boxes_size);
-                height: rem($boxes_size);
+                width: rem($boxes-size);
+                height: rem($boxes-size);
                 background: darken($boxColor, +5%);
                 color: $boxTextColor;
                 @if $index == 10 {

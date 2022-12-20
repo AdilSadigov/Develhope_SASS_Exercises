@@ -1,0 +1,119 @@
+@use "sass:color";
+@use "sass:math";
+
+
+$colorPrimary: red;
+$colorSecondary: green;
+$colorTertiary: blue;
+$boxColor: white;
+$boxTextColor: black;
+
+$size: 16;
+$boxes-size: 45;
+
+@function rem($size) {
+    @return calc($size/16) + rem;
+}
+
+@function rem($boxes-size) {
+    @return calc($boxes-size/16) + rem;
+}
+
+@mixin article-card ($color, $border-color, $font-size: rem($size)) {
+    color: $color;
+    border: 2px solid $border-color;
+    font-size: $font-size;
+}
+
+main {
+    margin: rem($size);
+    border: 2px solid $colorPrimary;
+    text-align: center;
+
+    .header {
+        margin-top: 2rem;
+
+        %text {
+            display: inline;
+            color: $colorSecondary;
+        }
+
+        &_title {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            @extend %text;
+            border-bottom: 2px solid $colorTertiary;
+        }
+
+        &_subtitle {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            @extend h1;
+            padding: rem($size);
+            border: 2px solid $colorPrimary;
+        }
+    }
+    
+    .lorem-texts {
+        display: flex;
+        margin: rem($size);
+
+        .blue-text {
+            @include article-card($colorTertiary, $colorSecondary, );
+            padding: 0.7rem 5px;
+        }
+
+        .red-text {
+            @include article-card($colorPrimary, $colorSecondary, );
+            padding: 0.7rem 5px;
+        }
+    }
+
+    .boxes {
+        display: flex;
+        justify-content: space-between;
+        text-align: start;
+        margin: rem($size);
+
+        $index: 1;
+        @while $index < 20 {
+            div:nth-child(#{$index}) {
+                border: 2px solid $colorPrimary;
+                width: rem($boxes_size);
+                height: rem($boxes_size);
+                background: darken($boxColor, +5%);
+                color: $boxTextColor;
+                @if $index == 10 {
+                    background-color: $colorTertiary;
+                    color: $colorPrimary;
+                    font-weight: bold;
+                }
+            } 
+            $index: $index + 1;
+            $boxColor: darken($boxColor, +5%);
+            $boxTextColor: lighten($boxTextColor, +5%)
+        }
+
+        $boxFontSize: (
+            1rem: 1rem,
+            2rem: 2rem,
+            3rem: 3rem
+        );
+
+        @each $name, $value in $boxFontSize {
+            .fs-#{$name} {
+            font-size: $value;
+            }
+        };
+    }
+
+    .footer-text{
+        @include article-card($colorSecondary, $colorTertiary, 24px);
+        margin: rem($size);
+        padding: 0.7rem 5px;
+    }
+}

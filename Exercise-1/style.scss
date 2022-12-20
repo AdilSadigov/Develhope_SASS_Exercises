@@ -10,12 +10,10 @@ main {
     text-align: center;
 
     .title {
-        font-size: 2rem;
-        font-weight: bold;
         color: $green;
         margin-top: 2rem;
 
-        p {
+        h1 {
             display: inline;
             border-bottom: 2px solid $blue;
         }

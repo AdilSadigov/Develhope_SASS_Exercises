@@ -4,12 +4,10 @@ main {
   text-align: center;
 }
 main .title {
-  font-size: 2rem;
-  font-weight: bold;
   color: green;
   margin-top: 2rem;
 }
-main .title p {
+main .title h1 {
   display: inline;
   border-bottom: 2px solid blue;
 }

@@ -1,9 +1,9 @@
 @use "sass:color";
 
 
-$red: red;
-$blue: blue; 
-$green: green;
+$colorPrimary: red;
+$colorSecondary: green;
+$colorTertiary: blue;
 
 $size: 16;
 
@@ -19,7 +19,7 @@ $size: 16;
 
 main {
     margin: rem($size);
-    border: 2px solid $red;
+    border: 2px solid $colorPrimary;
     text-align: center;
 
     .header {
@@ -27,7 +27,7 @@ main {
 
         %text {
             display: inline;
-            color: $green;
+            color: $colorSecondary;
         }
 
         &_title {
@@ -36,7 +36,7 @@ main {
 
         h1 {
             @extend %text;
-            border-bottom: 2px solid $blue;
+            border-bottom: 2px solid $colorTertiary;
         }
 
         &_subtitle {
@@ -46,7 +46,7 @@ main {
         h2 {
             @extend h1;
             padding: rem($size);
-            border: 2px solid $red;
+            border: 2px solid $colorPrimary;
         }
 
     }
@@ -57,18 +57,18 @@ main {
         margin: rem($size);
 
         .blue-text {
-            @include article-card($blue, $green, );
+            @include article-card($colorTertiary, $colorSecondary, );
             padding: 0.7rem 5px;
         }
 
         .red-text {
-            @include article-card($red, $green, );
+            @include article-card($colorPrimary, $colorSecondary, );
             padding: 0.7rem 5px;
         }
     }
 
     .footer-text{
-        @include article-card($green, $blue, 24px);
+        @include article-card($colorSecondary, $colorTertiary, 24px);
         margin: rem($size);
         padding: 0.7rem 5px;
     }

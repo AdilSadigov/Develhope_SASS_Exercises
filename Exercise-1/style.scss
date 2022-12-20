@@ -1,21 +1,21 @@
 @use "sass:color";
 
-$red: red;
-$blue: blue; 
-$green: green;
+$colorPrimary: red;
+$colorSecondary: green;
+$colorTertiary: blue;
 
 main {
     margin: 1rem;
-    border: 2px solid $red;
+    border: 2px solid $colorPrimary;
     text-align: center;
 
     .title {
-        color: $green;
+        color: $colorSecondary;
         margin-top: 2rem;
 
         h1 {
             display: inline;
-            border-bottom: 2px solid $blue;
+            border-bottom: 2px solid $colorTertiary;
         }
     }
 
@@ -24,14 +24,14 @@ main {
         margin: 1rem;
 
         .first-part {
-            border: 2px solid $green;
-            color: blue;
+            border: 2px solid $colorSecondary;
+            color: $colorTertiary;
             padding: 1rem 5px;
         }
 
         .second-part {
             @extend .first-part;
-            color: $red;
+            color: $colorPrimary;
         }
 
         .third-part {

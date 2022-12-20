@@ -1,0 +1,39 @@
+main {
+  margin: 1rem;
+  border: 2px solid red;
+  text-align: center;
+}
+main .title {
+  margin-top: 2rem;
+}
+main .title h1 {
+  color: green;
+  display: inline;
+  border: none;
+  border-bottom: 2px solid blue;
+}
+main .lorem-texts {
+  display: flex;
+  margin: 1rem;
+}
+main .lorem-texts .blue-text {
+  color: blue;
+  border: 2px solid green;
+  font-size: 1rem;
+  padding: 0.7rem 5px;
+}
+main .lorem-texts .red-text {
+  color: red;
+  border: 2px solid green;
+  font-size: 1rem;
+  padding: 0.7rem 5px;
+}
+main .footer-text {
+  color: green;
+  border: 2px solid blue;
+  font-size: 24px;
+  margin: 1rem;
+  padding: 0.7rem 5px;
+}
+
+/*# sourceMappingURL=style.css.map */

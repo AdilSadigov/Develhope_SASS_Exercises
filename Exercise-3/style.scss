@@ -1,0 +1,56 @@
+@use "sass:color";
+
+
+$red: red;
+$blue: blue; 
+$green: green;
+
+$size: 16;
+
+@function rem($size) {
+    @return calc($size/16) + rem;
+}
+
+@mixin article-card ($color, $border-color, $font-size: rem($size)) {
+    color: $color;
+    border: 2px solid $border-color;
+    font-size: $font-size;
+}
+
+main {
+    margin: rem($size);
+    border: 2px solid $red;
+    text-align: center;
+    .title {
+        margin-top: 2rem;
+
+        h1 {
+            color: $green;
+            display: inline;
+            border: none;
+            border-bottom: 2px solid $blue;
+        }
+    }
+    
+
+    .lorem-texts {
+        display: flex;
+        margin: rem($size);
+
+        .blue-text {
+            @include article-card($blue, $green, );
+            padding: 0.7rem 5px;
+        }
+
+        .red-text {
+            @include article-card($red, $green, );
+            padding: 0.7rem 5px;
+        }
+    }
+
+    .footer-text{
+        @include article-card($green, $blue, 24px);
+        margin: rem($size);
+        padding: 0.7rem 5px;
+    }
+}

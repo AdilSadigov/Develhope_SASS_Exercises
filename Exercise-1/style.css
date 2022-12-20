@@ -1,0 +1,29 @@
+main {
+  margin: 1rem;
+  border: 2px solid red;
+  text-align: center;
+}
+main .title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: green;
+  margin-top: 2rem;
+}
+main .title p {
+  display: inline;
+  border-bottom: 2px solid blue;
+}
+main .lorem-texts {
+  display: flex;
+  margin: 1rem;
+}
+main .lorem-texts .first-part, main .lorem-texts .third-part, main .lorem-texts .second-part, main .lorem-texts .fourth-part {
+  border: 2px solid green;
+  color: blue;
+  padding: 1rem 5px;
+}
+main .lorem-texts .second-part, main .lorem-texts .fourth-part {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

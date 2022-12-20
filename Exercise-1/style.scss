@@ -1,0 +1,47 @@
+@use "sass:color";
+
+$red: red;
+$blue: blue; 
+$green: green;
+
+main {
+    margin: 1rem;
+    border: 2px solid $red;
+    text-align: center;
+
+    .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $green;
+        margin-top: 2rem;
+
+        p {
+            display: inline;
+            border-bottom: 2px solid $blue;
+        }
+    }
+
+    .lorem-texts {
+        display: flex;
+        margin: 1rem;
+
+        .first-part {
+            border: 2px solid $green;
+            color: blue;
+            padding: 1rem 5px;
+        }
+
+        .second-part {
+            @extend .first-part;
+            color: $red;
+        }
+
+        .third-part {
+            @extend .first-part;
+        }
+
+        .fourth-part {
+            @extend .second-part
+        }
+    }
+}

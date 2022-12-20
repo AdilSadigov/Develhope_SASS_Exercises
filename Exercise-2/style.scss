@@ -14,13 +14,13 @@ main {
     margin: 1rem;
     border: 2px solid $red;
     text-align: center;
+    
     .title {
         margin-top: 2rem;
 
         h1 {
             color: $green;
             display: inline;
-            border: none;
             border-bottom: 2px solid $blue;
         }
     }

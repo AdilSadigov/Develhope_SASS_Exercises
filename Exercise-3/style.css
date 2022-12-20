@@ -9,7 +9,6 @@ main .title {
 main .title h1 {
   color: green;
   display: inline;
-  border: none;
   border-bottom: 2px solid blue;
 }
 main .lorem-texts {

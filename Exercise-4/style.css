@@ -3,13 +3,25 @@ main {
   border: 2px solid red;
   text-align: center;
 }
-main .title {
+main .header {
   margin-top: 2rem;
 }
-main .title h1 {
-  color: green;
+main .header h1, main .header h2 {
   display: inline;
+  color: green;
+}
+main .header_title {
+  margin-bottom: 3rem;
+}
+main .header h1, main .header h2 {
   border-bottom: 2px solid blue;
+}
+main .header_subtitle {
+  margin-bottom: 2rem;
+}
+main .header h2 {
+  padding: 1rem;
+  border: 2px solid red;
 }
 main .lorem-texts {
   display: flex;

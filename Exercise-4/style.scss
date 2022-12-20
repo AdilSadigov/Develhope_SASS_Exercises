@@ -21,14 +21,34 @@ main {
     margin: rem($size);
     border: 2px solid $red;
     text-align: center;
-    .title {
+
+    .header {
         margin-top: 2rem;
 
-        h1 {
-            color: $green;
+        %text {
             display: inline;
+            color: $green;
+        }
+
+        &_title {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            @extend %text;
             border-bottom: 2px solid $blue;
         }
+
+        &_subtitle {
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            @extend h1;
+            padding: rem($size);
+            border: 2px solid $red;
+        }
+
     }
     
 
